@@ -1,0 +1,21 @@
+<ul>
+  {{#each albums}}
+  <li>
+    {{#if images.length}}
+    <img src="{{ images.0.url }}" alt="{{ name }}">
+    {{/if}}
+    <h5>{{ name }}</h5>
+    <a href="/album/{{ id }}">View Tracks</a>
+  </li>
+  {{/each}}
+</ul>
+
+<hr>
+
+<h3>You might also want to listen to these other artist's new releases</h3>
+
+<ul>
+  {{#each releases}}
+  <li>{{name}}</li>
+  {{/each}}
+</ul>
